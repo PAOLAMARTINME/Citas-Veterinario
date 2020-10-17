@@ -1,5 +1,5 @@
 
-DEPLOY :  https://citas-veterinario-curso-react-hooks.netlify.app
+DEPLOYMENT :  https://citas-veterinario-curso-react-hooks.netlify.app
 
 
 
