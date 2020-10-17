@@ -15,7 +15,7 @@ function App() {
 
   // Arreglo de citas 
 
-  const [citas, guardarCitas] = useState([citasIniciales])
+  const [citas, guardarCitas] = useState(citasIniciales)
 
   // Use Effect para realizar ciertas operaciones cuando el state cambia
 
@@ -60,13 +60,12 @@ const titulo = citas.length === 0 ? 'No hay citas' : "Administra tus citas"
 
           <div className="one-half column">
             <h2>{titulo}</h2>
-            {citas.map(cita => (
-              <Cita
-                key={cita.id}
-                cita={cita} 
-                eliminarCita={eliminarCita}
-                />
-            ))}
+            {citas.map(
+              cita =>
+                typeof cita.id !== 'undefined' && (
+                  <Cita key={cita.id} cita={cita} eliminarCita={eliminarCita} />
+                )
+            )}
           </div>
         </div>
       </div>
